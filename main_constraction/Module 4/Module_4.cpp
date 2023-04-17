@@ -5,7 +5,7 @@ int main()
 
 	setlocale(LC_ALL, "Russian");
 
-	int a, b, x, result = 0, tmp = 1;
+	int a, b, x,  result = 0, tmp = 1;
 	char ext = 'n';
 
 
