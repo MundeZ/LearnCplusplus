@@ -1,4 +1,5 @@
 #include <iostream>
+#include "calculate.h"
 
 int main()
 {
@@ -25,64 +26,41 @@ int main()
 			std::cin >> a;
 			std::cout << "Введите значения Б: ";
 			std::cin >> b;
-			result = a + b;
+			result = Plus(a, b);
 			break;
 		case 2:
 			std::cout << "Введите значения А: ";
 			std::cin >> a;
 			std::cout << "Введите значения Б: ";
 			std::cin >> b;
-			result = a - b;
+			result = Minus(a, b);
 			break;
 		case 3:
 			std::cout << "Введите значения А: ";
 			std::cin >> a;
 			std::cout << "Введите значения Б: ";
 			std::cin >> b;
-			result = a * b;
+			result = Multiplication(a, b);
 			break;
 		case 4:
 			std::cout << "Введите значения А: ";
 			std::cin >> a;
 			std::cout << "Введите значения Б: ";
 			std::cin >> b;
-			if (a == 0)
-			{
-				std::cout << "Делить на ноль нельзя!" << std::endl;
-				break;
-			}
-			else if (b == 0)
-			{
-				std::cout << "Делить на ноль нельзя!" << std::endl;
-				break;
-			}
-			else
-			{
-				result = a / b;
-				break;
-			}
+			result = Degree(a, b);
+			break;
 
 		case 5:
 			std::cout << "Факториал какого числа вы хотите найти ? ";
 			std::cin >> a;
-			tmp = 1;
-			for (int i = 1; i <= a; i++)
-			{
-				tmp *= i;
-			}
-			result = tmp;
+			result = Factorial(a);
 			break;
 		case 6:
 			std::cout << "Введите число: ";
 			std::cin >> a;
 			std::cout << "Введите степень: ";
 			std::cin >> b;
-			tmp = 1;
-			for (int i = 1; i <= b; i++)
-			{
-				tmp *= a;
-			}
-			result = tmp;
+			result = pow(a,b);
 			break;
 		default:
 			break;
