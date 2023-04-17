@@ -1,20 +1,99 @@
-// Module_4.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+	setlocale(LC_ALL, "Russian");
+
+	int a, b, x, result = 0, tmp = 1;
+	char ext = 'n';
+
+
+	while (ext == 'n') {
+
+		std::cout << "Выберите какую операцию хотите совершить:" << std::endl
+			<< "Введите 1 для выбора +" << std::endl
+			<< "Введите 2 для выбора -" << std::endl
+			<< "Введите 3 для выбора *" << std::endl
+			<< "Введите 4 для выбора /" << std::endl
+			<< "Введите 5 для выбора !" << std::endl
+			<< "Введите 6 для выбора ^" << std::endl;
+		std::cin >> x;
+		switch (x) {
+		case 1:
+			std::cout << "Введите значения А: ";
+			std::cin >> a;
+			std::cout << "Введите значения Б: ";
+			std::cin >> b;
+			result = a + b;
+			break;
+		case 2:
+			std::cout << "Введите значения А: ";
+			std::cin >> a;
+			std::cout << "Введите значения Б: ";
+			std::cin >> b;
+			result = a - b;
+			break;
+		case 3:
+			std::cout << "Введите значения А: ";
+			std::cin >> a;
+			std::cout << "Введите значения Б: ";
+			std::cin >> b;
+			result = a * b;
+			break;
+		case 4:
+			std::cout << "Введите значения А: ";
+			std::cin >> a;
+			std::cout << "Введите значения Б: ";
+			std::cin >> b;
+			if (a == 0)
+			{
+				std::cout << "Делить на ноль нельзя!" << std::endl;
+				break;
+			}
+			else if (b == 0)
+			{
+				std::cout << "Делить на ноль нельзя!" << std::endl;
+				break;
+			}
+			else
+			{
+				result = a / b;
+				break;
+			}
+
+		case 5:
+			std::cout << "Факториал какого числа вы хотите найти ? ";
+			std::cin >> a;
+			tmp = 1;
+			for (int i = 1; i <= a; i++)
+			{
+				tmp *= i;
+			}
+			result = tmp;
+			break;
+		case 6:
+			std::cout << "Введите число: ";
+			std::cin >> a;
+			std::cout << "Введите степень: ";
+			std::cin >> b;
+			tmp = 1;
+			for (int i = 1; i <= b; i++)
+			{
+				tmp *= a;
+			}
+			result = tmp;
+			break;
+		default:
+			break;
+		}
+
+		std::cout << "Результат: " << result << std::endl;
+		std::cout << "Введите любой знак для завершения, или n для продолжения: " << std::endl;
+		char tmp2;
+		std::cin >> tmp2;
+		ext = tmp2;
+	}
+
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menudsadsa
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
