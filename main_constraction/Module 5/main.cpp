@@ -17,7 +17,7 @@ int main()
 
 	vm->setSlot(*slot);
 
-	std::cout << "Количество вободных слотов в вендинговой машине для батончиков:" << vm->getCountAvalibleSlots() << std::endl;
+	std::cout << "Количество свободных слотов в вендинговой машине для батончиков:" << vm->getCountAvalibleSlots() << std::endl;
 
 
 	delete vm;
