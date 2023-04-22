@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{45fff429-148c-46fc-a9b2-876def02448b}</ProjectGuid>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <ProjectGuid>{c48ef23e-d56f-4a00-ada4-e26f79f71b34}</ProjectGuid>
+    <RootNamespace>main</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="product.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="snackslot.cpp" />
+    <ClCompile Include="vendingMachine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="product.h" />
+    <ClInclude Include="snackslot.h" />
+    <ClInclude Include="vendingMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
